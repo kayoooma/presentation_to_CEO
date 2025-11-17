@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выводы за месяц работы в компании - Полная версия</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #1a5276 0%, #2e86c1 100%);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        section {
+            background-color: #fff;
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #2e86c1;
+        }
+        h2 {
+            color: #1a5276;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eaeaea;
+            font-size: 1.5rem;
+        }
+        h3 {
+            color: #2c3e50;
+            margin: 20px 0 12px 0;
+            font-size: 1.2rem;
+        }
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        .highlight {
+            background-color: #fef9e7;
+            padding: 20px;
+            border-left: 4px solid #f1c40f;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .problem-section {
+            border-left-color: #e74c3c;
+        }
+        .solution-section {
+            border-left-color: #27ae60;
+        }
+        .position {
+            background-color: #e8f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 25px;
+            border: 2px solid #2e86c1;
+        }
+        .position ol {
+            margin-top: 15px;
+        }
+        .position li {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            border-top: 1px solid #eaeaea;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin: 15px 0;
+            padding-left: 15px;
+            border-left: 3px solid #3498db;
+        }
+        .strong {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .structure-diagram {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border: 1px solid #eaeaea;
+        }
+        .level {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .position-box {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            text-align: center;
+            min-width: 200px;
+        }
+        .problem-position {
+            background: #fff5f5;
+            border: 1px solid #e74c3c;
+        }
+        .arrow {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        .toc {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .toc h2 {
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+        .toc ul {
+            columns: 2;
+            column-gap: 30px;
+        }
+        .toc li {
+            margin-bottom: 8px;
+        }
+        .toc a {
+            color: #2e86c1;
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Выводы за месяц работы в компании</h1>
+        <p class="subtitle">Обсуждение рабочих вопросов и перспектив развития</p>
+    </header>
+
+    <div class="toc">
+        <h2>Содержание</h2>
+        <ul>
+            <li><a href="#salary">Повышение зарплаты до $2000</a></li>
+            <li><a href="#management">Проблемы менеджмента</a></li>
+            <li><a href="#regulation">Слабая регламентация процессов</a></li>
+            <li><a href="#authority">Проблемы полномочий</a></li>
+            <li><a href="#structure">Структура позиций в компании</a></li>
+            <li><a href="#marketing">Маркетинг и развитие продуктов</a></li>
+            <li><a href="#it-expansion">Расширение IT-команды</a></li>
+            <li><a href="#coo">Отсутствие операционного директора</a></li>
+            <li><a href="#schedule">График работы 6/1</a></li>
+            <li><a href="#position">Моя позиция</a></li>
+        </ul>
+    </div>
+
+    <section id="salary">
+        <h2>Повышение зарплаты до $2000</h2>
+        <div class="highlight">
+            <p>Мы с Акмаль ака договорились, что если я покажу свою ценность, то тогда будет 2000$.</p>
+            <p class="strong">Вопрос: Разве я уже не показал свою ценность?</p>
+        </div>
+        <ul>
+            <li>Если мы сейчас поставим KPI для повышения фиксированной зарплаты, то это будет неправильно, так как меня это будет демотивировать</li>
+            <li>Я ждал другого - мне нужно было показать свою ценность, я показал</li>
+            <li>Если мы сейчас отбросим это и поставим вообще другие условия, то это просто не то, на чём мы договорились, из-за чего меня это будет демотивировать</li>
+            <li>Но это не значит, что я не хочу заниматься застройщиками - я готов и их вести, просто речь сейчас идёт про фиксу в 2000$, а всё что будет кроме этого, это уже отдельная тема</li>
+            <li>Если мы сделаем так, то как раз таки KPI сможет выполнять свою функцию мотивации. А если просто подменим условия, то нет</li>
+        </ul>
+    </section>
+
+    <section class="problem-section" id="management">
+        <h2>Проблемы менеджмента</h2>
+        <h3>1. Не хватает реального адекватного плана по развитию продуктов</h3>
+        <h3>2. Стратегические решения принимаются неправильно</h3>
+        <ul>
+            <li>Стратегические решения принимаются или не принимаются опираясь на загруженность IT команды</li>
+            <li>Происходит так, что слово IT команды главнее Бизнес отдела, а не наоборот</li>
+        </ul>
+        <div class="highlight">
+            <p class="strong">Правильная схема должна быть:</p>
+            <p>Генеральный директор (инвестор) даёт заказ бизнес отделу → Бизнес отдел даёт заказ остальным на основе принятых продуктов → Остальные реализуют свою часть от продукта, будь-то HR или IT отдел</p>
+        </div>
+    </section>
+
+    <section class="problem-section" id="regulation">
+        <h2>Слабая регламентация или её отсутствие</h2>
+        <p>Это создаёт затруднения в рутинных и частых вопросах как на уровне компании, так и внутри отдельных команд и продуктов.</p>
+        
+        <h3>1. На уровне компании</h3>
+        <ul>
+            <li>Пришёл новый сотрудник и у него всегда есть куча одинаковых вопросов:
+                <ul>
+                    <li>Как зовут этого человека?</li>
+                    <li>На какой он позиции?</li>
+                    <li>За что он отвечает?</li>
+                    <li>Где то или это?</li>
+                </ul>
+            </li>
+            <li class="strong">Обычно это делают HR, но я считаю, что надо это зарегламентировать, сделать карту позиций, в которую можно будет заглянуть и понять кто чем занимается</li>
+        </ul>
+
+        <h3>2. На уровне команды</h3>
+        <ul>
+            <li>Есть одинаковые задачи постоянно (сделать пост, монтаж, анализ, обзвон и тд.)</li>
+            <li class="strong">Всё это нужно задокументировать чтобы легче происходил онбординг для новых членов команды, и чтобы остальные со стороны тоже могли оценить как организованы процессы и как их можно улучшить при надобности</li>
+        </ul>
+
+        <h3>3. На уровне продукта и компании</h3>
+        <ul>
+            <li>У каждого члена компании должно быть общее видение куда она идёт и почему? Как на уровне продукта, так и на уровне компании</li>
+            <li>Компанию с несколькими продуктами что-то должно объединять</li>
+        </ul>
+    </section>
+
+    <section class="problem-section" id="authority">
+        <h2>Проблемы полномочий</h2>
+        <div class="highlight">
+            <p>Мне не нравится то, что я Business Development Manager, но не имею власти принимать стратегические решения, хотя в этом суть моей позиции.</p>
+        </div>
+        
+        <h3>Проблема с IT отделом</h3>
+        <ul>
+            <li>То, что у BizDev нет полномочий</li>
+            <li>То, что решение о продукте принимается с учётом загруженности IT отдела</li>
+            <li>То, что сам IT отдел вообще находится в другом городе</li>
+        </ul>
+        <p class="quote">Как при такой картине получится хороший продукт?</p>
+    </section>
+
+    <section class="problem-section" id="structure">
+        <h2>Структура позиций в компании</h2>
+        <div class="highlight">
+            <p>Почему Ислом ака одновременно и директор маркетплейса и Project manager?</p>
+            <p class="strong">Я как BDM должен стоять выше PM но ниже директора маркетплейса, а тут получается что я одновременно и выше и ниже него.</p>
+        </div>
+        
+        <h3>Текущая проблемная структура:</h3>
+        <div class="structure-diagram">
+            <div class="level">
+                <div class="position-box">Директор маркетплейса<br>(Ислом ака)</div>
+            </div>
+            <div class="arrow">↓</div>
+            <div class="level">
+                <div class="position-box problem-position">Project Manager<br>(Ислом ака)</div>
+            </div>
+            <div class="arrow">↓</div>
+            <div class="level">
+                <div class="position-box">Business Development Manager<br>(Я)</div>
+            </div>
+        </div>
+        
+        <h3>Проблема:</h3>
+        <ul>
+            <li>Ислом ака занимает две позиции одновременно, что создает конфликт интересов</li>
+            <li>BDM (Business Development Manager) должен быть выше PM в иерархии принятия стратегических решений</li>
+            <li>В текущей структуре я одновременно подчиняюсь и руковожу одним и тем же человеком</li>
+            <li>Это создает путаницу в полномочиях и ответственности</li>
+        </ul>
+        
+        <h3>Предлагаемая правильная структура:</h3>
+        <div class="structure-diagram">
+            <div class="level">
+                <div class="position-box">Директор маркетплейса<br>(Ислом ака)</div>
+            </div>
+            <div class="arrow">↓</div>
+            <div class="level">
+                <div class="position-box">Business Development Manager<br>(Я)</div>
+            </div>
+            <div class="arrow">↓</div>
+            <div class="level">
+                <div class="position-box">Project Manager<br>(отдельный специалист)</div>
+            </div>
+        </div>
+        
+        <div class="highlight">
+            <p class="strong">Такая структура позволит четко разделить ответственность и полномочия, устранив текущий конфликт.</p>
+        </div>
+    </section>
+
+    <section class="problem-section" id="marketing">
+        <h2>Развитие продуктов и маркетинг</h2>
+        <div class="highlight">
+            <p>Мне не нравится то, куда и как идут наши продукты. Рынок открыт, а мы вместо того чтобы агрессивно его захватывать, бизнес стратегию устанавливаем опираясь на загруженность IT команды.</p>
+        </div>
+        
+        <h3>Слабый маркетинг - предложения по улучшению:</h3>
+        <ul>
+            <li>Провести учёт отдела и задокументировать разные аспекты</li>
+            <li>Составить список: какие отдельные продукты команда уже делала?</li>
+            <li>Проанализировать: от каких продуктов в конце мало результата?</li>
+            <li>Отталкиваясь от этого, поправить общий план маркетинговый</li>
+            <li>Помимо основной работы, которая должна быть выложена, нужно ещё постоянно исследовать и улучшать качество каждого отдельного продукта</li>
+            <li>Улучшать все аспекты: дизайн, переходы в видео и сценарии под разные маркетинговые цели: узнаваемость, лидогенерация, повышение лояльности и тд.</li>
+        </ul>
+    </section>
+
+    <section class="solution-section" id="it-expansion">
+        <h2>Расширение IT-команды</h2>
+        <p>Надо расширять IT команду, пока рынок не занят полностью.</p>
+        <div class="highlight">
+            <p class="strong">Продуктов уже на 2-3 года хватит.</p>
+        </div>
+    </section>
+
+    <section class="solution-section" id="coo">
+        <h2>Отсутствие операционного директора (COO)</h2>
+        <p>CEO обычно занят расширением возможностей компании с внешним миром.</p>
+        <div class="highlight">
+            <p class="strong">COO смотрит за тем, чтобы все "гайки" компании работали как надо внутри организации.</p>
+        </div>
+    </section>
+
+    <section class="problem-section" id="schedule">
+        <h2>График работы 6/1</h2>
+        <div class="highlight">
+            <p>Я тут всего месяц, а я уже жить расхотел - это не нормально. Я в день трачу 3 часа на дорогу и ещё 9 часов в день на работу.</p>
+        </div>
+        
+        <h3>Вопрос: почему 6/1?</h3>
+        <ul>
+            <li>Я предлагаю 5/2 - не просто так придумали</li>
+            <li>6/1 вообще не даёт мне лично жить, отдыхать, думать о чём-то своём</li>
+        </ul>
+        
+        <h3>Как проходит мой выходной:</h3>
+        <ul>
+            <li>Я просыпаюсь с головной болью, в попытке выспаться</li>
+            <li>Потом пытаюсь убрать головную боль</li>
+            <li>Сил и желания что-то продуктивное сделать вообще нет</li>
+            <li>Единственное что хочется - это тупить и всё</li>
+        </ul>
+        
+        <div class="highlight">
+            <p>Это не нормально! Это не эффективно! И мне это не нравится! Это противоречит моему жизненному ритму.</p>
+            <p class="strong">Если мы ничего не поменяем, это лишь вопрос времени, когда я уйду отсюда.</p>
+        </div>
+    </section>
+
+    <section class="position" id="position">
+        <h2>Моя позиция</h2>
+        <ol>
+            <li>Поднимаем зарплату по договору до $2000</li>
+            <li>Переходим на график 5/2</li>
+            <li>У меня в целях максимальной эффективности и реализации моего потенциала должна быть власть и полномочия, даже если меня придётся для этого перенести на другую позицию</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>Данный документ подготовлен для конструктивного диалога и поиска взаимовыгодных решений</p>
+    </footer>
+
+    <script>
+        // Добавляем плавную прокрутку к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
